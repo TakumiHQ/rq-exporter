@@ -10,4 +10,8 @@ dev:
 clean:
 	docker compose down -v
 
+takumi-build:
+	docker build -t takumiengineers/rq-exporter:v2.1.0 .
+	docker push takumiengineers/rq-exporter:v2.1.0
+
 .PHONY: test build dev clean
